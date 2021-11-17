@@ -4,6 +4,9 @@ import dotenv from 'dotenv';
 const PORT = process.env.PORT || 3000;
 const HOST = '127.0.0.1';
 
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
+console.log(process.env);
 
 const envFound = dotenv.config();
 if (envFound.error) {
