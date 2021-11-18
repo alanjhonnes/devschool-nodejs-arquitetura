@@ -23,6 +23,11 @@ app.get('/', (req, res) => {
 app.get('/usuarios', usuariosController);
 app.post('/usuarios', adicionaUsuarioController);
 
+process.on('SIGTERM', (signal) => {
+    console.log('sinal de término')
+    console.log(signal)
+})
+
 app.listen(PORT, () => {
     console.log(`Running on http://${HOST}:${PORT}`);
 });
