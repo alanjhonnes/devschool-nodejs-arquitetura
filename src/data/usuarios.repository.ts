@@ -3,7 +3,7 @@ import { User } from "../model/user.model";
 const usuarios: User[] = [
     {
         id: '1',
-        nome: 'Alan',
+        nome: 'Alan Jhonnes',
     }
 ]
 
