@@ -19,8 +19,12 @@ console.log(process.env);
 
 // App
 const app = express();
-app.use(pino)
+
 app.use(bodyParser.json());
+app.use(pino({
+    enabled: true,
+    autoLogging: true,
+}))
 app.get('/', (req, res) => {
     res.send('Hello world\n');
 });
